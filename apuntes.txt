@@ -1,0 +1,32 @@
+Hola mundo
+
+x,y,z -> semantic versioning
+
+x la major -> es cuando se rompe la compatibilidada hacia atrás
+y la minor -> es cuando se añaden nuevas funcionalidades
+z la patch -> es cuando se arregla un bug
+
+- Dependencia de producción:
+Nuestra aplicación lo necesita para funcionar.
+
+- Dependencia de desarrollo
+se usa para el desarrollo y se pone al final -D, cuando llegue a producción son dependencias que no son necesarias de usar.
+--- libreria standard--- npm i standard
+
+node --watch nombre_archivo
+con esta línea de comando, se esta viendo constantemente el archivo node que le indicamos y si hacemos un cambio, se aplica, sin tener que para el proceso y reiniciarlo
+
+STATUSCODE
+100-199		Respuestas informátivas
+200-200		Respuestas satisfactorias
+300-399		Redirecciones
+400-499		Errores del cliente
+500-599		Errores del servidor
+
+NODEMON
+cuando hagamos npm install nodemon -D
+debemos de ir al package.json y dentro de "script" escribir "dev": "nodemon nombre_archivo"
+
+EXPRESS
+npm install express -E
+cuando añadimos el -E decimos que es un modo exacto, así quitamos el caret y no se actualiza en automático, lo hacemos porque esta es una api de producción.
