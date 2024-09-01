@@ -30,3 +30,35 @@ debemos de ir al package.json y dentro de "script" escribir "dev": "nodemon nomb
 EXPRESS
 npm install express -E
 cuando añadimos el -E decimos que es un modo exacto, así quitamos el caret y no se actualiza en automático, lo hacemos porque esta es una api de producción.
+
+RESP API (200 - Royd Fielding)
+Arquitectura de software:
+	Principios de rest:
+		- Escalabilidad
+		- Portabilidad
+		- Simplicidad
+		- Visibilidad
+		- Fiabilidad
+		- Modificabilidad (Fácil de modificar)
+	Recursos:
+		- Cada recurso se identifica con url
+		- Verbos HTTP: para definir las operaciones que se pueden hacer con los recursos(CREATE, READ, POST, DELETE)
+		- Las representaciones: El cliente debería poder decidir la representación del recurso (JSON, XML, HTML, etc...)
+		- Stateless: El cliente debe enviar toda la información necesaria para procesar la request
+		- Interfaz uniforme
+		- Separación de conceptos: Permite que cliente y servidor evolucionen de forma separada
+
+
+DIFERENCIA ENTRE POST,PUT, PATCH
+
+Idempotencia = propiedad de realizar una acción determinada varias veces y aún así conseguir siempre el mismo resultado que se obtendría al hacerlo una vez.
+
+POST = Crear un nuevo elemento/recurso en el servidor.
+/movies
+No es idempotente porque siempre se crearía un nuevo recurso
+PUT = Actualizar totalmente un elemento ya existente o crearlo si no existe.
+/movies/123-456-789
+si es idempotente, el resultado siempre es el mismo.
+PATCH = Actualizar parcialmente un elemento/recurlo.
+/movies/123-456-789
+Si es idempotente, el resultado siempre es el mismo.
