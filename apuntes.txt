@@ -1,0 +1,64 @@
+Hola mundo
+
+x,y,z -> semantic versioning
+
+x la major -> es cuando se rompe la compatibilidada hacia atrás
+y la minor -> es cuando se añaden nuevas funcionalidades
+z la patch -> es cuando se arregla un bug
+
+- Dependencia de producción:
+Nuestra aplicación lo necesita para funcionar.
+
+- Dependencia de desarrollo
+se usa para el desarrollo y se pone al final -D, cuando llegue a producción son dependencias que no son necesarias de usar.
+--- libreria standard--- npm i standard
+
+node --watch nombre_archivo
+con esta línea de comando, se esta viendo constantemente el archivo node que le indicamos y si hacemos un cambio, se aplica, sin tener que para el proceso y reiniciarlo
+
+STATUSCODE
+100-199		Respuestas informátivas
+200-200		Respuestas satisfactorias
+300-399		Redirecciones
+400-499		Errores del cliente
+500-599		Errores del servidor
+
+NODEMON
+cuando hagamos npm install nodemon -D
+debemos de ir al package.json y dentro de "script" escribir "dev": "nodemon nombre_archivo"
+
+EXPRESS
+npm install express -E
+cuando añadimos el -E decimos que es un modo exacto, así quitamos el caret y no se actualiza en automático, lo hacemos porque esta es una api de producción.
+
+RESP API (200 - Royd Fielding)
+Arquitectura de software:
+	Principios de rest:
+		- Escalabilidad
+		- Portabilidad
+		- Simplicidad
+		- Visibilidad
+		- Fiabilidad
+		- Modificabilidad (Fácil de modificar)
+	Recursos:
+		- Cada recurso se identifica con url
+		- Verbos HTTP: para definir las operaciones que se pueden hacer con los recursos(CREATE, READ, POST, DELETE)
+		- Las representaciones: El cliente debería poder decidir la representación del recurso (JSON, XML, HTML, etc...)
+		- Stateless: El cliente debe enviar toda la información necesaria para procesar la request
+		- Interfaz uniforme
+		- Separación de conceptos: Permite que cliente y servidor evolucionen de forma separada
+
+
+DIFERENCIA ENTRE POST,PUT, PATCH
+
+Idempotencia = propiedad de realizar una acción determinada varias veces y aún así conseguir siempre el mismo resultado que se obtendría al hacerlo una vez.
+
+POST = Crear un nuevo elemento/recurso en el servidor.
+/movies
+No es idempotente porque siempre se crearía un nuevo recurso
+PUT = Actualizar totalmente un elemento ya existente o crearlo si no existe.
+/movies/123-456-789
+si es idempotente, el resultado siempre es el mismo.
+PATCH = Actualizar parcialmente un elemento/recurlo.
+/movies/123-456-789
+Si es idempotente, el resultado siempre es el mismo.
