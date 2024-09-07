@@ -57,7 +57,7 @@ app.post('/movies', async (req, res) => {
 
 app.delete('/movies/:id', (req, res) => {
 	const { id } = req.params
-	const movieIndex = movies.findeIndex(movie => movie.id === id)
+	const movieIndex = findeIndex(movie => movie.id === id)
 
 	if(movieIndex === -1){
 		return res.status(404).json({ message: 'Movie not found'})

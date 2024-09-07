@@ -62,3 +62,16 @@ si es idempotente, el resultado siempre es el mismo.
 PATCH = Actualizar parcialmente un elemento/recurlo.
 /movies/123-456-789
 Si es idempotente, el resultado siempre es el mismo.
+
+
+SISTEMA DE MÓDULES DE NODE.JS
+commonJs -> clásico
+	require
+	module.exports
+ESModules -> moderno y recomendado
+	import/export.
+
+MVC (MODELO, CONTROLADOR, VISTA)
+Modelo -> La lógica del negocio.
+Controlador -> Orquestador: actua como intermediario.
+Vista -> Interfaz del usuario.
