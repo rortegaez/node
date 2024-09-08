@@ -25,6 +25,8 @@ export class MovieModel {
     }
 
     movies.push(newMovie)
+
+    return newMovie
   }
 
   static async delete ({ id }) {
@@ -40,7 +42,7 @@ export class MovieModel {
     if (movieIndex === -1) return false
 
     movies[movieIndex] = {
-      ...movies(movieIndex),
+      ...movies[movieIndex],
       ...input
     }
     return movies[movieIndex]

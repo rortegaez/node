@@ -43,6 +43,7 @@ export class MovieController {
     const result = validatePartialMovie(req.body)
 
     if (!result.success) {
+      console.log('no esta')
       return res.status(400).json({ error: JSON.parse(result.error.message) })
     }
 
